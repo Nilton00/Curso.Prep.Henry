@@ -25,9 +25,9 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  if (status === 1) return 'Olnine'
+  if (status === 1) return 'Online'
   else if (status === 2) return 'Away'
-  else {return 'Offiline'}
+  else {return 'Offline'}
 }
 
 function saludo(idioma) {
@@ -37,10 +37,10 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if (idioma === 'aleman') return 'Guten Tang!'
+  if (idioma === 'aleman') return 'Guten Tag!'
   else if (idioma === 'mandarin') return 'Ni Hao!'
   else if (idioma === 'ingles') return 'Hello!'
-  else if ( idioma !== 'aleman' || idioma !== 'mandarin' || idioma !== 'ingles' || idioma === 'undefined') return 'Hola'
+  else if ( idioma !== 'aleman' || idioma !== 'mandarin' || idioma !== 'ingles' || idioma === 'undefined') return 'Hola!'
 }
 
 function colors(color) {
@@ -53,8 +53,8 @@ function colors(color) {
   //Usar el statement Switch.
   if (color === 'blue') return 'This is blue'
   else if (color === 'red') return 'This is red'
-  else if (color === ' green') return 'This is green'
-  else if (color === 'orange') return 'this is orange'
+  else if (color === 'green') return 'This is green'
+  else if (color === 'orange') return 'This is orange'
   else (color === 'default'); {return 'Color not found'}
 }
 
@@ -109,9 +109,9 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1 === 0 || num2 === 0 || num3 === 0) return 'Error'
   else if (num1 < 0 || num2 < 0 || num3 === 0) return 'Hay negativos'
-  else if (num1 > num2 && num1 > num3 && num1 === +num1) return 'Numero 1 es mayor y positivo'
+  else if (num1 > num2 && num1 > num3 && num1 === +num1) return 'Número 1 es mayor y positivo'
   else if (num3 > num1 && num3 > num2) return num3 + 1 
-  else {return 'false'}
+  else {return false}
 }
 
 function esPrimo(numero) {
@@ -120,10 +120,15 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero === 0 || numero === 1) return false 
-  for (var i = 2; i < numero; i++){
-    if (numero % i === 0) return false 
-  }return true 
+  if (numero < 2) return false 
+  if (numero === 2) return true
+  for (var i = 2; i < numero; i++)
+  {if (numero % i === 0)
+    {
+      return false
+    } 
+  }
+  return true 
 }
 
 function esVerdadero(valor){
@@ -131,7 +136,7 @@ function esVerdadero(valor){
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if (valor === true) return 'Soy verdadero'
-  else if (valor === false) return 'Soy false'
+  else if (valor === false) return 'Soy falso'
 
 }
 
@@ -140,7 +145,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   let arraytabladel6 = []
-  for (var i = 0; i < 11; i++ ) {arraytabladel6 (6 * 1)
+  for (var i = 0; i < 11; i++ ) { arraytabladel6.push(i * 6)
   } return arraytabladel6 
   
 }

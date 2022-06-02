@@ -4,10 +4,10 @@
 const nuevaString = 'joaco';
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = '22';
+const nuevoNum = 22;
 
 // Crea una variable booleana:
-const nuevoBool = 'true';
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -93,7 +93,7 @@ function menosQueNoventa(num) {
   // Tu código:
   if (num < 90){
     return true 
-  } else if (num > 90) {
+  } else  {
     return false 
   }
 }
@@ -104,7 +104,7 @@ function mayorQueCincuenta(num) {
   // Tu código:
   if (num > 50) {
     return true
-  } else if (num < 50) {
+  } else {
     return false 
   }
 }
@@ -112,8 +112,8 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  var resto = x / y 
-  return resto 
+return  x % y 
+
   
 }
 
@@ -222,7 +222,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'hola'+ ' ' + nombre 
+  return `Hola ${nombre}!` 
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -262,12 +262,17 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length === 1){
-    if (letra === a || letra === e || letra === i || letra === o || letra === u ||
-       letra === A || letra === E || letra === I || letra === O || letra === U){
-         return 'Es vocal'
-       }else {'Dato incorrecto'}
-  }return 'Dato incorrecto'
+  if (letra.length > 1){
+    return 'Dato incorrecto'; 
+  }
+  if (letra === 'a' ||
+      letra === 'e' ||
+      letra === 'i' ||
+      letra === 'o' ||
+      letra === 'u' 
+    ){
+      return 'Es vocal';
+    } else {return 'Dato incorrecto';}
 }
 
 
